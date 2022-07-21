@@ -5,7 +5,7 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": ["/c","${fileDirname}\\debug\\${fileBasenameNoExtension}.exe","&","pause"],
+      "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "k:/code/c++/test",
