@@ -1,11 +1,11 @@
-// BM23 二叉树的前序遍历
+// BM24 二叉树的中序遍历
+#include <vector>
 #include <iostream>
 #include <stack>
-#include <vector>
 
 using namespace std;
 
-struct TreeNode {
+struct TreeNode{
     int val;
     struct TreeNode *left;
     struct TreeNode *right;
@@ -14,18 +14,18 @@ struct TreeNode {
 
 class Solution{
 public:
-    vector<int> preorderTraversal(TreeNode *root) {
-        stack<struct TreeNode*> s;
+    vector<int> inorderTraversal(TreeNode *root) {
+        stack<TreeNode*> s;
         vector<int> res;
+        TreeNode* t = root;
 
-        TreeNode *t = root;
         while(!s.empty() || t) {
             while(t) {
-                res.push_back(t->val);
                 s.push(t);
                 t = t->left;
             }
             t = s.top();
+            res.push_back(t->val);
             s.pop();
             t = t->right;
         }

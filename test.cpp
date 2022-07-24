@@ -11,7 +11,10 @@ struct aaa {
 };
 
 int main() {
-    aaa *a = new aaa(1, 1);
-    cout << a->a << endl;
+    vector<int> a{1,2,3,4,5};
+    a.insert(a.begin()+3, 10);
+    cout << a[3] << endl;
+    for(auto item: a)
+        cout << item << " ";
     return 0;
 }

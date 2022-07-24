@@ -29,6 +29,9 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "*.tcc": "cpp"
   }
 }

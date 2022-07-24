@@ -1,10 +1,8 @@
-// BM23 二叉树的前序遍历
+// BM34 判断是不是二叉搜索树
 #include <iostream>
 #include <stack>
-#include <vector>
 
 using namespace std;
-
 struct TreeNode {
     int val;
     struct TreeNode *left;
@@ -14,21 +12,22 @@ struct TreeNode {
 
 class Solution{
 public:
-    vector<int> preorderTraversal(TreeNode *root) {
-        stack<struct TreeNode*> s;
-        vector<int> res;
+    bool isValidBST(TreeNode* root) {
+        stack<TreeNode*> s;
+        TreeNode *t = root, *pre=nullptr;
 
-        TreeNode *t = root;
         while(!s.empty() || t) {
             while(t) {
-                res.push_back(t->val);
                 s.push(t);
                 t = t->left;
             }
             t = s.top();
             s.pop();
+            if (pre && pre->val > t->val)
+                return false;
+            pre = t;
             t = t->right;
         }
-        return res;
+        return true;
     }
 };
