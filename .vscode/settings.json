@@ -32,6 +32,7 @@
     "iostream": "cpp",
     "string": "cpp",
     "string_view": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "vector": "cpp"
   }
 }
