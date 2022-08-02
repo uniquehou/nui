@@ -16,7 +16,7 @@ public:
                 swap(num[i], num[k]);
                 perm(res, num, k+1, m);
                 swap(num[i], num[k]);
-            }
+        }
     }
     
     vector<vector<int>> permuteUnique(vector<int> &num) {
